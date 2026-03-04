@@ -1,0 +1,27 @@
+using namespace std;
+
+int main()
+{
+    int a; float b; double c,e; bool d;
+    cout <<"Enter the value number1 (int):";
+    cin >> a;
+    cout <<"Enter the value number2 (float):";
+    cin >> b;
+    cout <<"a+b=" << a+b << endl;
+    cout <<"Enter the value number1 (float):";
+    cin >> b;
+    cout <<"Enter the value number2 (double):";
+    cin >> c;
+    cout <<"b-c=" << b-c << endl;
+    cout <<"Enter the value number1 (double):";
+    cin >> c;
+    cout << "Enter the value number2 (bool, 0 or 1): ";
+    cin >> d;
+    cout << "c*d=" << c*d << endl;
+    cout <<"Enter the value number1 (double):";
+    cin >> c;
+    cout <<"Enter the value number2 (double):";
+    cin >> e;
+    cout << "c/e=" << c/e << endl;
+    return 0;
+}
