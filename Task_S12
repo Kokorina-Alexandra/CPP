@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    setlocale(0,"Russian");
+    int number=1;
+    int sum=0;
+    while (number<=1000){
+        if (number%7==0){
+            sum+=number;
+        }number+=4;
+    }
+    cout<< "Сумма чисел, кратных 7: " << sum;
+    return 0;
+}
