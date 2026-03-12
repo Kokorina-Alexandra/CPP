@@ -1,0 +1,14 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(){
+    setlocale(0, "Russian");
+    int number, counter = 1;
+    ifstream file("output.txt");
+    while (file >> number) {
+    cout << counter << ". " << number << endl;
+    counter++;}
+    file.close();
+    return 0;
+}
