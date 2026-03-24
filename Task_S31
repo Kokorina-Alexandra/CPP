@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <clocale>
+using namespace std;
+
+int main() {
+    setlocale(0, "Russian");
+    string names[10] = {"ноль", "один", "два", "три", "четыре","пять", "шесть", "семь", "восемь", "девять"};
+    string input;
+    cout << "Введите число: ";
+    cin >> input;
+    for (char i : input) {
+        if (i >= '0' && i <= '9') {
+            cout << names[i - '0'] << " ";}
+    }
+    cout << endl;
+    return 0;
+}
