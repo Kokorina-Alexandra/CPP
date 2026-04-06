@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+bool queen_hit(string pos1, string pos2) {
+    char letter1 = pos1[0];
+    char letter2 = pos2[0];
+    if (letter1 < 'a' || letter1 > 'h' || letter2 < 'a' || letter2 > 'h') {
+        cout << "Error,0" << endl;
+        return false;}
+    char digit1 = pos1[1];
+    char digit2 = pos2[1];
+    if (digit1 < '1' || digit1 > '8' || digit2 < '1' || digit2 > '8') {
+        cout << "Error,0" << endl;
+        return false;}
+        
+    int hor1 = letter1 - 'a';
+    int hor2 = letter2 - 'a';
+    int ver1 = digit1 - '1';
+    int ver2 = digit2 - '1';
+    
+    if (hor1 == hor2) return true;
+    if (ver1 == ver2) return true;
+    if (abs(hor1 - hor2) == abs(ver1 - ver2)) return true;
+    return false;}
+    
+int main() {
+    setlocale(0,"Russian");
+    cout << boolalpha;
+    string k1, k2;
+    cout << "Введите две клетки (например a1 b2): ";
+    cin >> k1 >> k2;
+    cout << "Ферзь угрожает? " << queen_hit(k1, k2) << endl;
+    return 0;
+}
