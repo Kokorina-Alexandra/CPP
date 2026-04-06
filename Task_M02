@@ -1,0 +1,21 @@
+#include <iostream>
+#include <clocale>
+#include <cmath>
+using namespace std;
+
+int main(){
+    int N;
+    double A, pi, S;
+    setlocale(0,"Russian");
+    cout << "Введите длину стороны A: ";
+    cin >> A;
+    cout << "Введите количество сторон N (целое,не меньше 3): ";
+    cin >> N;
+    if (N < 3 || A <= 0) {
+            cout << "Ошибка! Количество сторон должно быть >= 3, а длина стороны > 0." << endl;
+            return 1;}
+    pi = acos(-1.0);
+    S = (N * A * A) / (4 * tan(pi / N));
+    cout << "Площадь правильного " << N << "-угольника со стороной " << A << " = " << S << endl;
+    return 0;
+}
